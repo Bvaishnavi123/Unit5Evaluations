@@ -3,9 +3,9 @@ import "./App.css"
 function App() {
 
     const [cricketinfo,setcrickket] = useState({
-      score : 0,
-      wicket :0,
-      over : 0
+      score : 76,
+      wicket :2,
+      over : 50
       
     })
     const [balldependover,setball]= useState(0)
