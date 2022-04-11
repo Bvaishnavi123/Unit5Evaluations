@@ -5,10 +5,10 @@ function App() {
     const [cricketinfo,setcrickket] = useState({
       score : 76,
       wicket :2,
-      over : 50
+      over : 5
       
     })
-    const [balldependover,setball]= useState(0)
+    const [balldependover,setball]= useState(8)
     if(cricketinfo.score>=100)
     {
       return <h1 className="status">India Won</h1>
@@ -81,7 +81,7 @@ function App() {
               // Show Over here in the format: "over.ball" eg: 4.5 means 4th over and 5th ball
               // if 1 more ball is thrown then over is now 5.0
               // you have to write logic to form this string from current ball number.
-              [`${balldependover}.`,cricketinfo.over]
+              [`${balldependover}:`,cricketinfo.over]
             }
           </h1>
         </div>
