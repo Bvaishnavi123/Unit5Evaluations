@@ -1,0 +1,15 @@
+.table{
+    width:300px;
+    border : 1px solid black;
+    margin: auto;
+}
+td{
+    border : 1px solid black;
+    margin:10px
+}
+.controls{
+    width: 300px;
+    margin:auto;
+    border : 1px solid black;
+    margin-bottom: 10px;
+}

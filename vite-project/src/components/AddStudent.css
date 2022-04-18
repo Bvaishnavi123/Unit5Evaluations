@@ -1,0 +1,9 @@
+.addstudent{
+    width: 300px;
+    border : 1px solid black;
+    margin : auto;
+    padding :10px
+}
+input {
+    margin-left: 10px;
+}
