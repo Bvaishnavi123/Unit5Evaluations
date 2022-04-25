@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./ShowStudent.css"
 export const ShowStudents = () => {
   const [data, setData] = useState([]);
+  const [coffee , setCoffee]= useState("");
   const getData = async () => {
     const res = await fetch("http://localhost:8080/students").then((d) =>
       d.json()
@@ -12,6 +13,26 @@ export const ShowStudents = () => {
   useEffect(() => {
     getData();
   }, []);
+  const sortingHandler = (e)=>{
+    console.log(e.target.value)
+  }
+
+  const selectHandler = (e)=>{
+    //console.log(e.target.value)
+    setCoffee(e.target.value)
+    if(e.target.value === "first_name")
+    {
+       let newarr = data.sort(function(a,b){
+          return a.first_name[0].charCodeAt(0)-b.first_name[0].charCodeAt(0)
+       })
+       console.log(newarr);
+       setData(prevState=>{
+         return prevState = newarr
+       })
+    }
+  }
+
+
  
   return (
     <div>
@@ -21,6 +42,7 @@ export const ShowStudents = () => {
           <select
             // select dropdown needs both value and onChange
             className="sortby"
+            onChange={selectHandler}
            
           >
             <option value="first_name">First Name</option>

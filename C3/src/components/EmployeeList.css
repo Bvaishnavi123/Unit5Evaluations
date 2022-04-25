@@ -1,0 +1,12 @@
+.list_container{
+    width:90%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    margin:auto;
+    margin-top: 10px;
+}
+.employee_image{
+    width:200px;
+    height:200px;
+}
